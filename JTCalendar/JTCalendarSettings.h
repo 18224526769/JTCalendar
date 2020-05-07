@@ -10,7 +10,8 @@
 typedef NS_ENUM(NSInteger, JTCalendarWeekDayFormat) {
     JTCalendarWeekDayFormatSingle,
     JTCalendarWeekDayFormatShort,
-    JTCalendarWeekDayFormatFull
+    JTCalendarWeekDayFormatFull,
+    JTCalendarWeekDayFormatChain
 };
 
 @interface JTCalendarSettings : NSObject
