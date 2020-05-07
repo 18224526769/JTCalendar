@@ -78,10 +78,12 @@
             days = [NSMutableArray arrayWithArray:@[@"周一", @"周二", @"周三", @"周四", @"周五", @"周六", @"周日"]];
             break;
     }
-    
-    for(NSInteger i = 0; i < days.count; ++i){
-        NSString *day = days[i];
-        [days replaceObjectAtIndex:i withObject:[day uppercaseString]];
+    /// 大小写转换会影响中文显示
+    if (_manager.settings.weekDayFormat != JTCalendarWeekDayFormatChain) {
+        for(NSInteger i = 0; i < days.count; ++i){
+            NSString *day = days[i];
+            [days replaceObjectAtIndex:i withObject:[day uppercaseString]];
+        }
     }
     
     // Redorder days for be conform to calendar
