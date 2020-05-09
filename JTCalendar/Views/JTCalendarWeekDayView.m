@@ -75,7 +75,7 @@
             days = [[dateFormatter standaloneWeekdaySymbols] mutableCopy];
             break;
         case JTCalendarWeekDayFormatChain:
-            days = [NSMutableArray arrayWithArray:@[@"周一", @"周二", @"周三", @"周四", @"周五", @"周六", @"周日"]];
+            days = [NSMutableArray arrayWithArray:@[@"周日", @"周一", @"周二", @"周三", @"周四", @"周五", @"周六"]];
             break;
     }
     /// 大小写转换会影响中文显示
